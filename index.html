@@ -1,0 +1,167 @@
+<!--TIPO DE DOCUMENTO-->
+<!DOCTYPE html>
+<html lang="en">
+	<!--CABEZAL PAGINA WEB-->
+	<head>
+		<!--TITULO (PESTAÑA)-->
+			<title>NIVEL SOCIOECONÓMICO (NSE)</title>
+			<link type="image/png" rel='shortcut icon' href='./Icon/Icon.ITSE.png'></link>
+		<!--META-->
+			<meta charset="utf-8">
+		<!--LINK DE REFERENCIA-->
+			<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css"></script>
+			<link type="text/css" rel="stylesheet" href="./Control/Control.FullScreen.css"></script> <!--PLUGIN BY 'BRUNO B' - GITHUB:'https://github.com/brunob/leaflet.fullscreen'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.MiniMap.css"></script> <!--PLUGIN BY 'ROBERT NORDAN' - GITHUB:'https://github.com/Norkart/Leaflet-MiniMap'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.ResetView.css"></script> <!--PLUGIN BY 'WONG HOI SING EDISON' - GITHUB:'https://github.com/drustack/Leaflet.ResetView'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.Search.css"></script> <!--PLUGIN BY 'STEFANO CUDINI' - GITHUB:'https://github.com/stefanocudini/leaflet-search'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.SidePanel.css"></script> <!--PLUGIN BY 'MAXWELL ILAI' - GITHUB:'https://github.com/maxwell-ilai/Leaflet.SidePanel'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.Style.css"></script> <!--ELABORADO POR 'MR_URBANIST_MX: DIEGO ARMANDO SALAZAR GONZÁLEZ'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.Style.Map.css"></script> <!--ELABORADO POR 'MR_URBANIST_MX: DIEGO ARMANDO SALAZAR GONZÁLEZ'-->
+		<!--SCRIPT-->
+			<script type="text/javascript" src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+			<script type="text/javascript" src="./Control/Control.FullScreen.js"></script> <!--PLUGIN BY 'BRUNO B' - GITHUB:'https://github.com/brunob/leaflet.fullscreen'-->
+			<script type="text/javascript" src="./Control/Control.MiniMap.js"></script> <!--PLUGIN BY 'ROBERT NORDAN' - GITHUB:'https://github.com/Norkart/Leaflet-MiniMap'-->
+			<script type="text/javascript" src="./Control/Control.ResetView.js"></script> <!--PLUGIN BY 'WONG HOI SING EDISON' - GITHUB:'https://github.com/drustack/Leaflet.ResetView'-->
+			<script type="text/javascript" src="./Control/Control.Search.js"></script> <!--PLUGIN BY 'STEFANO CUDINI' - GITHUB:'https://github.com/stefanocudini/leaflet-search'-->
+			<script type="text/javascript" src="./Control/Control.SidePanel.js"></script> <!--PLUGIN BY 'MAXWELL ILAI' - GITHUB:'https://github.com/maxwell-ilai/Leaflet.SidePanel'-->
+		<!--ARCHIVOS CARTOGRAFÍA GEOJSON-->
+			<!--POLIGONOS-->
+			<script type="text/javascript" src="./GeoJSON/0_AB.js"></script>
+			<script type="text/javascript" src="./GeoJSON/0_C1.js"></script>
+			<script type="text/javascript" src="./GeoJSON/0_C2.js"></script>
+			<script type="text/javascript" src="./GeoJSON/0_C3.js"></script>
+			<script type="text/javascript" src="./GeoJSON/0_D1.js"></script>
+			<script type="text/javascript" src="./GeoJSON/0_D2.js"></script>
+			<script type="text/javascript" src="./GeoJSON/0_E.js"></script>
+	</head>
+	<!--ESTRUCTURA PAGINA WEB-->
+	<body>
+		<!--VISUALIZADOR DE CAPAS-->
+		<section class="mapa">
+			<!--MAPA-->
+			<div id="map">
+				<!--SIDEPANEL LEFT (IZQUIERDO)-->
+				<div id="mySidepanelLeft" 
+					class="sidepanel" 
+					aria-label="side panel" 
+					aria-hidden="false">
+					<div class="sidepanel-inner-wrapper">
+						<nav class="sidepanel-tabs-wrapper"
+							aria-label="sidepanel tab navigation">
+							<ul class="sidepanel-tabs">
+								<li class="sidepanel-tab">
+									<a href="#" 
+									class="sidebar-tab-link"
+									role="tab" 
+									data-tab-link="tab-1">
+									<svg xmlns="http://www.w3.org/2000/svg"
+									     width="24" 
+										 height="24"
+										 fill="currentColor"
+										 class="bi bi-layers-fill"
+										 viewBox="0 0 16 16">
+										<path d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882z"/>
+										<path d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0z"/>
+									</svg>
+									</a>
+								</li>
+								<li class="sidepanel-tab">
+									<a href="#"
+									class="sidebar-tab-link"
+									role="tab"
+									data-tab-link="tab-2">
+									<svg xmlns="http://www.w3.org/2000/svg"
+									     width="24"
+										 height="24"
+										 fill="currentColor"
+										 class="bi bi-file-person"
+										 viewBox="0 0 16 16">
+										<path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+										<path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+									</svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="sidepanel-content-wrapper">
+							<div class="sidepanel-content">
+								<div class="sidepanel-tab-content" data-tab-content="tab-1">
+									 <h4>ÍNDICE DE TRANSFORMACIÓN SOCIOESPACIAL 2010-2020</h4>
+									 <p>El ITSE registra las transformaciones socio-espaciales atípicas experimentadas en cada AGEB, 
+										por encima del promedio de las mismas transformaciones en toda la ciudad.
+										<br></br>
+										El método se basa en el desarrollo de un índice compuesto de ocho indicadores derivados de 
+										variables de los Censos de Población y Vivienda 2000 y 2010, que caracterizan los diferentes 
+										grupos sociales y espacios involucrados en los procesos de gentrificación. La escala espacial 
+										que se utilizó para el análisis de la información fueron las áreas geoestadísticas básicas (AGEB) 
+										y su relación a una escala estatal. La elaboración estuvo compuesta de cinco fases (Bournazou, 2015):
+										<br></br>
+										1. “Identificación de las variables relevantes a la temática y desarrollo de indicadores.</br>
+										2. Recolección de datos secundarios y homologación de estadísticas y unidades espaciales para los años 2000 y 2010.</br>
+										3. Asignación de un valor a cada indicador, de acuerdo a su correlación con el fenómeno de la gentrificación.</br>
+										4. Construcción del índice con base en la suma de los indicadores y su puntaje.</br>
+										5. Elaboración, análisis e interpretación de mapas sociales, con Sistema de Información Geográfica (SIG).”</br>
+										<br></br>
+										La construcción de cada uno de los indicadores se basó en el cambio porcentual de la variable en un AGEB 
+										y la relación porcentual con el cambio en la ciudad. Los 8 indicadores resultantes se clasificaron en dos 
+										grandes categorías; las sociales, en las cuáles se consideró la población total, población de 0 a 4 años, 
+										población mayor a 65 años, grado promedio de escolaridad y promedio de hijos; la segunda categoría es la espacial, 
+										en la cuales se consideró el total de viviendas, promedio de habitantes por cuarto y número de viviendas con computadora.
+										<br></br>
+										Una vez calculados los indicadores, se procedió a ponderarlos en relación a la gentrificación, 
+										donde el incremento o decrecimiento significativo de cada indicador en el universo de AGEB a la ciudad 
+										se relacionó de manera positiva o negativa al proceso de gentrificación con los siguientes supuestos:
+										<br></br>
+										1. El incremento de la Población total puede indicar auge inmobiliario y tendencia de gentrificación. (Positiva: +1)</br>
+										2. Comúnmente existe una relación negativa entre incremento de niños y el proceso de revaloración del espacio. (Negativa: -1)</br>
+										3. Comúnmente existe una relación negativa entre incremento de Adultos Mayores y el proceso de revaloración del espacio. (Negativa: -1)</br>
+										4. En las zonas revalorizadas o gentrificadas sube el promedio de nivel de instrucción de sus habitantes. (Positiva: +1)</br>
+										5. Un número de hijos mayor que el promedio caracteriza en general a los hogares en espacios no gentrificados. (Negativa: -1)</br>
+										6. El incremento relativo en el número de viviendas puede dar indicios de gentrificación. (Positiva: +1)</br>
+										7. El incremento promedio relativo de ocupantes por cuarto se asocia con procesos de desvalorización del espacio. (Negativa: -1)</br>
+										8. El aumento relativo en hogares con computadora indica grupos sociales más afluentes. (Positiva: +1)</br>
+									</p>
+								</div>
+								<div class="sidepanel-tab-content" data-tab-content="tab-2">
+									<h4>ACERCA DE</h4>
+									<p>
+										<a href="https://www.cidur.org/gentrificacion-miradas-desde-la-academia/" class="btn">METODOLOGÍA ITSE (ARTICULO)</a>
+										<br></br>
+									</p>
+									<h4>CRÉDITOS SERVICIOS WEB</h4>
+									<p>
+										| © "Leaflet" | y complementos |</br>
+										| © "OpenStreetMap" |</br>
+										| © "Humanitarian" |</br>
+										| © "ESRI" |</br>
+									</p>
+									<h4>CRÉDITOS CARTOGRAFÍA</h4>
+									<p>
+										| © "INEGI, 2011" (SCINCE 2010) |</br>
+										| © "INEGI, 2021" (SCINCE 2020) |</br>
+									</p>
+									<h4>CRÉDITOS DESARROLLADOR WEB</h4>
+									<p>	
+										| © "Mr Urbanist MX" |</br>
+										| Desarrollador del Geovisor / Cartografía |</br>
+										<br></br>
+										<br></br>
+										<br></br>
+										| Todos los derechos reservados |</br>
+										| Año 2024 |</br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sidepanel-toggle-container">
+						<button class="sidepanel-toggle-button"
+								type="button" 
+								aria-label="toggle side panel">
+						</button>
+					</div>
+				</div>
+				<script type="text/javascript" src="./Tematizacion/Map_NSE.js"></script>
+		</section>
+	</body>
+</html>
