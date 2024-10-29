@@ -107,7 +107,7 @@ let D02 = L.geoJson(d_02, {style: function (feature){
         opacity: 0.9,
         fillOpacity: 0.9,
         color: '#ffffff',
-        fillColor: '#ccffcc',
+        fillColor: '#b4ffb4',
     };}}).addTo(map);
 
 let E00 = L.geoJson(e_00, {style: function (feature){
@@ -116,7 +116,7 @@ let E00 = L.geoJson(e_00, {style: function (feature){
         opacity: 0.9,
         fillOpacity: 0.9,
         color: '#000000',
-        fillColor: '#ffffcc',
+        fillColor: '#ffffa5',
     };}}).addTo(map);
 
 // ACTIVAR CAPAS //
